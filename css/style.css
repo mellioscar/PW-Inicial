@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a,
+li {
+    display: inline-block;
+    font-style: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*========================================*/
+/*////// DISEÑO HEADER              //////*/
+/*========================================*/
+
+header {
+    height: 370px;
+    width: 100vw;
+    font-family: 'Carter One';
+    background: linear-gradient(to right, orange, white);
+}
+
+#header .headerLogo {
+    position:absolute;
+    justify-items: left;
+    filter: drop-shadow(8px 6px 5px rgb(7, 7, 128));
+}
+
+#header .headerTitulo {
+    color:#011AFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    top: 40px; 
+    position: sticky;
+    filter: drop-shadow(3px 3px 2px black);
+}
+
+/*       PROPIEDADES DEL NAV             */
+#header .navBar ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+#header .navBar ul li:hover{
+    background-color:chocolate;
+    padding: 0 1%;
+    border-radius: 10%;
+    border-style: outset;
+    transition: 0.3s;
+}
+
+#header .navBar {
+    justify-content:center;
+    gap: 1px;
+    top: 175px;
+    position: sticky;
+}
+
+/*      PROPIEDADES DEL BANNER           */
+.headerBanner {
+    width: 100vw;
+    height: 148px;
+    top: 257px;
+    position: sticky;
+}
+
+.headerBanner img{
+    width: 100%;
+    height: 148px;
+}
+
+.headerBanner img:hover{
+    filter: drop-shadow(-5px 5px 10px black);
+    opacity: 80%;
+}
+
+/*========================================*/
+/*////// DISEÑO BODY                //////*/
+/*========================================*/
+
+body {
+    margin: 0px;
+    max-width: 100vw;
+}
+
+main {
+    min-height: 100vh;  /*100% DE VISTA DE PANTALLA DEL MAIN */
+    background: linear-gradient(to right, dodgerblue, white);
+    display: flex;
+    flex-direction: column;
+}
+
+/*========================================*/
+/*////// DISEÑO FOOTER              //////*/
+/*========================================*/
+
+.footer {
+    background-color: white;
+}
+
+#footer .footerLogo {
+    position:relative;
+    text-align: center;
+}
+
+.footerText{
+    text-align: left;
+    font-family: 'Carme';
+}
+
+/*       LOGOS REDES + EFECTOS           */
+#footer .listRedes {
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.listRedes li {
+    list-style: none;
+}
+
+.listRedes li a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #e96529;
+    z-index: 1;
+}
+
+.listRedes li a .icon {
+    position: relative;
+    color: #e96529;
+    transition: .5s;
+    z-index: 3;
+}
+
+.listRedes li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+.listRedes li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+
+.listRedes li a:hover:before {
+    top: 0;
+}
+
+.listRedes li:nth-child(1) a:before{
+    background: #3b5999;
+}
+
+.listRedes li:nth-child(2) a:before{
+    background: #e62e2d;
+}
+
+.listRedes li:nth-child(3) a:before {
+    background: #e62e6d;
+}
+
+.listRedes li:nth-child(4) a:before {
+    background: #376ebe;
+}
+
+/*         CONTACTO FOOTER                */
+
+.listFooterContacto li{
+    width: 350px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    font-family: 'Carme';
+    color: black;
+    font-size: 16px;
+}
+
+#contListFooter{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*========================================*/
+/*////// CONTENIDO MAIN-INICIO      //////*/
+/*========================================*/
+
+/*      CONTENIDO GRILLA-CATEGORIAS       */
+#imgGridInicio{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 200px);
+    grid-template-areas:
+    /*COL#1     COL#2                */
+    "imgInicio1 textInicio" /*FILA #1*/
+    "imgInicio1 textInicio" /*FILA #2*/
+    "imgInicio2 textInicio" /*FILA #3*/
+    "imgInicio2 imgInicio3" /*FILA #4*/
+    "imgInicio2 imgInicio3" /*FILA #5*/
+;
+}
+
+.imgInicio1{
+    grid-area: imgInicio1;
+    background-image: url(../images/arena/arena-lleno.jpg);
+    margin: 1em;
+    filter: drop-shadow(-10px -10px 10px black);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgInicio2{
+    grid-area: imgInicio2;
+    background-image: url(../images/profesores/tecnico-profesor-2.jpg);
+    margin: 1em;
+    filter: drop-shadow(-10px 10px 10px black);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imgInicio3{
+    grid-area: imgInicio3;
+    background-image: url(../images/profesores/profesor-2.jpg);
+    margin: 1em;
+    filter: drop-shadow(10px 10px 10px black);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.textInicio{
+    grid-area: textInicio;
+    margin: 1em;
+    text-align: left;
+    font-size: 18px;
+    color: #011AFF;
+    font-family: 'Carme';
+}
+
+/*          SECCION SLIDER SPONSOR        */
+#textSponsor {
+    text-transform: uppercase;
+    color:blue;
+    font-size: 22px;
+    font-family: 'Carme';
+}
+
+.slider {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: 90px;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+/*========================================*/
+/*////// CONTENIDO MAIN-CATEGORIAS  //////*/
+/*========================================*/
+
+/*      CONTENIDO GRILLA-CATEGORIAS       */
+#imgGridCat{
+    display: grid;
+    padding: 3px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 342px);
+    grid-template-areas:
+    /*COL#1  COL#2             */
+    "imgCat1 textCat" /*FILA #1*/
+    "imgCat2 textCat" /*FILA #2*/
+    "imgCat3 textCat" /*FILA #3*/
+    "imgCat4 textCat" /*FILA #4*/
+    ;
+}
+
+.imgCat1{
+    grid-area: imgCat1;
+    background-image: url(../images/categorias/profesora-alumnos.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3px;
+}
+
+.imgCat2{
+    grid-area: imgCat2;
+    background-image: url(../images/categorias/cancha-entrenando2.jpeg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3px;
+}
+
+.imgCat3{
+    grid-area: imgCat3;
+    background-image: url(../images/categorias/cancha-entrenando.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3px;
+}
+
+.imgCat4{
+    grid-area: imgCat4;
+    background-image: url(../images/categorias/ninos-pelota.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3px;
+}
+
+.textCat{
+    grid-area: textCat;
+    text-align: left;
+    font-size: 26px;
+    padding: 1px;
+    margin: 1em;
+    color: #011AFF;
+    font-family: 'Carme';
+}
+
+
+/*========================================*/
+/*////// CONTENIDO MAIN-ARENA       //////*/
+/*========================================*/
+
+/*            SECCION TEXTO               */
+
+
+
+/*========================================*/
+/*////// CONTENIDO MAIN-PROFESORES  //////*/
+/*========================================*/
+
+/*            SECCION TEXTO               */
+
+
+
+/*========================================*/
+/*////// CONTENIDO MAIN-SPONSORS    //////*/
+/*========================================*/
+
+/*            SECCION TEXTO               */
+
+
+
+/*========================================*/
+/*////// CONTENIDO MAIN-CONTACTO    //////*/
+/*========================================*/
+
+/*            SECCION TEXTO               */
+
+
