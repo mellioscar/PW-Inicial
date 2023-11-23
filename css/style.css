@@ -48,16 +48,17 @@ header {
 }
 
 #header .navBar ul li:hover{
-    background-color:chocolate;
-    padding: 0 1%;
-    border-radius: 10%;
-    border-style: outset;
-    transition: 0.3s;
+    /*background-color:chocolate;
+    /*padding: 0 1%;*/
+    /*border-radius: 10%;*/
+    filter: drop-shadow(-5px 5px 3px #e96529);
+    /*border-style: inset;*/
+    transition: 0.5s;
 }
 
 #header .navBar {
     justify-content:center;
-    gap: 1px;
+    /*gap: 1px;*/
     top: 175px;
     position: sticky;
 }
@@ -77,7 +78,6 @@ header {
 
 .headerBanner img:hover{
     filter: drop-shadow(-5px 5px 10px black);
-    opacity: 80%;
 }
 
 /*========================================*/
@@ -104,9 +104,9 @@ main {
     background-color: white;
 }
 
-#footer .footerLogo {
-    position:relative;
-    text-align: center;
+#footer .footerLogo img {
+    position: absolute;
+    transform: translate(50vw, -40%);
 }
 
 .footerText{
@@ -130,7 +130,7 @@ main {
     height: 80px;
     background-color: #fff;
     text-align: center;
-    line-height: 80px;
+    line-height: 70px;
     font-size: 35px;
     margin: 0 10px;
     display: block;
@@ -168,20 +168,20 @@ main {
 .listRedes li a:hover:before {
     top: 0;
 }
-
+/*CAMBIO COLOR LOGO RED FACEBOOK  */
 .listRedes li:nth-child(1) a:before{
     background: #3b5999;
 }
-
+/*CAMBIO COLOR LOGO RED YOUTUBE   */
 .listRedes li:nth-child(2) a:before{
     background: #e62e2d;
 }
-
-.listRedes li:nth-child(3) a:before {
+/*CAMBIO COLOR LOGO RED INSTAGRAM */
+.listRedes li:nth-child(3) a:before{
     background: #e62e6d;
 }
-
-.listRedes li:nth-child(4) a:before {
+/*CAMBIO COLOR LOGO RED TWITTER   */
+.listRedes li:nth-child(4) a:before{
     background: #376ebe;
 }
 
@@ -256,7 +256,7 @@ main {
     grid-area: textInicio;
     margin: 1em;
     text-align: left;
-    font-size: 18px;
+    font-size: 17px;
     color: #011AFF;
     font-family: 'Carme';
 }
@@ -307,12 +307,16 @@ main {
 /*////// CONTENIDO MAIN-CATEGORIAS  //////*/
 /*========================================*/
 
+main{
+    padding-top: 20px;
+}
+
 /*      CONTENIDO GRILLA-CATEGORIAS       */
 #imgGridCat{
     display: grid;
     padding: 3px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 342px);
+    grid-template-rows: repeat(4, 300px);
     grid-template-areas:
     /*COL#1  COL#2             */
     "imgCat1 textCat" /*FILA #1*/
@@ -328,7 +332,7 @@ main {
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 3px;
+    margin: 3px;
 }
 
 .imgCat2{
@@ -337,7 +341,7 @@ main {
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 3px;
+    margin: 3px;
 }
 
 .imgCat3{
@@ -346,7 +350,7 @@ main {
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 3px;
+    margin: 3px;
 }
 
 .imgCat4{
@@ -355,15 +359,14 @@ main {
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 3px;
+    margin: 3px;
 }
 
 .textCat{
     grid-area: textCat;
     text-align: left;
     font-size: 26px;
-    padding: 1px;
-    margin: 1em;
+    margin: 3px;
     color: #011AFF;
     font-family: 'Carme';
 }
