@@ -16,65 +16,13 @@ li {
 /*========================================*/
 
 header {
-    height: 370px;
-    width: 100vw;
+    height: 245px;
     font-family: 'Carter One';
-    background: linear-gradient(to right, orange, white);
-}
-
-#header .headerLogo {
-    position:absolute;
-    justify-items: left;
-    filter: drop-shadow(8px 6px 5px rgb(7, 7, 128));
-}
-
-#header .headerTitulo {
-    color:#011AFF;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 32px;
-    text-align: center;
-    top: 40px; 
-    position: sticky;
-    filter: drop-shadow(3px 3px 2px black);
 }
 
 /*       PROPIEDADES DEL NAV             */
-#header .navBar ul {
-    display: flex;
-    justify-content: space-around;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-#header .navBar ul li:hover{
-    /*background-color:chocolate;
-    /*padding: 0 1%;*/
-    /*border-radius: 10%;*/
-    filter: drop-shadow(-5px 5px 3px #e96529);
-    /*border-style: inset;*/
-    transition: 0.5s;
-}
-
-#header .navBar {
-    justify-content:center;
-    /*gap: 1px;*/
-    top: 175px;
-    position: sticky;
-}
 
 /*      PROPIEDADES DEL BANNER           */
-.headerBanner {
-    width: 100vw;
-    height: 148px;
-    top: 257px;
-    position: sticky;
-}
-
-.headerBanner img{
-    width: 100%;
-    height: 148px;
-}
 
 .headerBanner img:hover{
     filter: drop-shadow(-5px 5px 10px black);
@@ -90,10 +38,10 @@ body {
 }
 
 main {
+    font-family: 'Carme';
+    padding-top: 20px;
     min-height: 100vh;  /*100% DE VISTA DE PANTALLA DEL MAIN */
     background: linear-gradient(to right, dodgerblue, white);
-    display: flex;
-    flex-direction: column;
 }
 
 /*========================================*/
@@ -102,17 +50,20 @@ main {
 
 .footer {
     background-color: white;
+    font-family: 'Carme';
 }
 
 #footer .footerLogo img {
-    position: absolute;
-    transform: translate(50vw, -40%);
+    position: relative;
+    transform: translate(50vw, -40%); /*POSICIONA EL LOGO EN EL CENTRO*/
+    top: 65px;                        /*POSICIONA EL LOGO POR DEBAJO DE LAS REDES*/
 }
 
-.footerText{
-    text-align: left;
-    font-family: 'Carme';
-}
+#contListFooter .listFooterContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;           /*POSICIONA LOS DATOS DE CONTACTO A LA DERECHA*/
+} 
 
 /*       LOGOS REDES + EFECTOS           */
 #footer .listRedes {
@@ -126,12 +77,12 @@ main {
 }
 
 .listRedes li a {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     background-color: #fff;
     text-align: center;
-    line-height: 70px;
-    font-size: 35px;
+    line-height: 42px;
+    font-size: 23px;
     margin: 0 10px;
     display: block;
     border-radius: 50%;
@@ -189,88 +140,28 @@ main {
 
 .listFooterContacto li{
     width: 350px;
-    height: 28px;
+    height: 20px;
     display: flex;
-    align-items: center;
-    font-family: 'Carme';
     color: black;
-    font-size: 16px;
-}
-
-#contListFooter{
-    display: flex;
-    justify-content: flex-end;
 }
 
 /*========================================*/
 /*////// CONTENIDO MAIN-INICIO      //////*/
 /*========================================*/
 
-/*      CONTENIDO GRILLA-CATEGORIAS       */
-#imgGridInicio{
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 200px);
-    grid-template-areas:
-    /*COL#1     COL#2                */
-    "imgInicio1 textInicio" /*FILA #1*/
-    "imgInicio1 textInicio" /*FILA #2*/
-    "imgInicio2 textInicio" /*FILA #3*/
-    "imgInicio2 imgInicio3" /*FILA #4*/
-    "imgInicio2 imgInicio3" /*FILA #5*/
-;
-}
-
-.imgInicio1{
-    grid-area: imgInicio1;
-    background-image: url(../images/arena/arena-lleno.jpg);
-    margin: 1em;
-    filter: drop-shadow(-10px -10px 10px black);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.imgInicio2{
-    grid-area: imgInicio2;
-    background-image: url(../images/profesores/tecnico-profesor-2.jpg);
-    margin: 1em;
-    filter: drop-shadow(-10px 10px 10px black);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.imgInicio3{
-    grid-area: imgInicio3;
-    background-image: url(../images/profesores/profesor-2.jpg);
-    margin: 1em;
-    filter: drop-shadow(10px 10px 10px black);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/*            DISEÑO TEXTO MAIN           */
 
 .textInicio{
-    grid-area: textInicio;
-    margin: 1em;
+    padding: 3px;
     text-align: left;
-    font-size: 17px;
     color: #011AFF;
     font-family: 'Carme';
-}
+} 
 
-/*          SECCION SLIDER SPONSOR        */
-#textSponsor {
-    text-transform: uppercase;
-    color:blue;
-    font-size: 22px;
-    font-family: 'Carme';
-}
+/*        SECCION SLIDER SPONSOR          */
 
 .slider {
-    width: 100vw;
+    width: 99vw;
     height: auto;
     margin: auto;
     overflow: hidden;
@@ -307,69 +198,87 @@ main {
 /*////// CONTENIDO MAIN-CATEGORIAS  //////*/
 /*========================================*/
 
-main{
-    padding-top: 20px;
-}
+/*           CONTENIDO CATEGORIAS         */
 
-/*      CONTENIDO GRILLA-CATEGORIAS       */
-#imgGridCat{
-    display: grid;
-    padding: 3px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 300px);
-    grid-template-areas:
-    /*COL#1  COL#2             */
-    "imgCat1 textCat" /*FILA #1*/
-    "imgCat2 textCat" /*FILA #2*/
-    "imgCat3 textCat" /*FILA #3*/
-    "imgCat4 textCat" /*FILA #4*/
-    ;
-}
-
-.imgCat1{
-    grid-area: imgCat1;
-    background-image: url(../images/categorias/profesora-alumnos.jpg);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 3px;
-}
-
-.imgCat2{
-    grid-area: imgCat2;
-    background-image: url(../images/categorias/cancha-entrenando2.jpeg);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 3px;
-}
-
-.imgCat3{
-    grid-area: imgCat3;
-    background-image: url(../images/categorias/cancha-entrenando.jpg);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 3px;
-}
-
-.imgCat4{
-    grid-area: imgCat4;
-    background-image: url(../images/categorias/ninos-pelota.jpg);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 3px;
-}
-
-.textCat{
-    grid-area: textCat;
-    text-align: left;
-    font-size: 26px;
-    margin: 3px;
+/* Responsive Grid */
+.textCat {
     color: #011AFF;
     font-family: 'Carme';
 }
+
+#responsiveGrid .contentGrid {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+#responsiveGrid .image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+}
+#responsiveGrid .bigImage {
+    height: 360px;
+}
+
+#responsiveGrid .smallImage {
+    height: 380px;
+}
+
+#responsiveGrid #imageOne {
+    background-image: url("../images/categorias/cancha-entrenando2.jpeg");
+}
+
+#responsiveGrid #imageTwo {
+    background-image: url("../images/categorias/ninos-pelota.jpg");
+}
+
+#responsiveGrid #imageThree {
+    background-image: url("../images/categorias/profesora-alumnos.jpg");
+}
+
+#responsiveGrid #imageFour {
+    background-image: url("../images/categorias/cancha-entrenando.jpg");
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #responsiveGrid .contentGrid {
+        height: 460px;
+    }
+    #responsiveGrid .bigImage {
+        height: 460px;
+    }
+    #responsiveGrid .smallImage {
+        height: 460px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #responsiveGrid .contentGrid {
+        height: 420px;
+    }
+    #responsiveGrid .bigImage {
+        height: 400px;
+    }
+    #responsiveGrid .smallImage {
+        height: 420px;
+    }
+}
+
+  /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+  /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }
+
+
+
+
 
 
 /*========================================*/

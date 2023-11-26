@@ -4,56 +4,81 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--LINK FUENTES: "CARTER ONE" & "CARME" -->
+
+<!--    LINK FUENTES: "CARTER ONE" & "CARME"     -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Carme&family=Carter+One&display=swap" rel="stylesheet">
+                
+<!--            LINKS BOOTSTRAP                  -->
+<!-- DESCARGA LIBRERIAS DE ESTILOS(CSS) Y FUNCIONES(JS)  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
+<!--            LINK FONT AWESOME                -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        
-        <!--LINKS BOOTSTRAP             -->
-        <!-- DESCARGAR LIBRERIAS DE ESTILOS(CSS) Y
-        FUNCIONES(JS) DE EJEMPLO
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
-        
-        <!--LINK ESTILOS                -->
+
+<!--            LINK DE ESTILOS/CSS              -->
         <link rel="stylesheet" href="../css/style.css"/>
-        <!--ICONO DE VENTANA            -->
+<!--            ICONO DE VENTANA                 -->
         <link rel="shortcut icon" href="../icons/BallBasketball.svg"/>        
-        <!--TITULO VENTANA              -->
+<!--            TITULO VENTANA                   -->
         <title>Club Depo - Basquet</title>
     </head>
 
     <body>
-        <!--            ENCABEZADO DEL SITIO              -->
+<!--            ENCABEZADO DEL SITIO             -->
         <header id="header">
-            <article class="headerLogo">
-                <img src="../images/Deproca_logo.png" alt="Banner Logo" width="134px" height="162px"/>
-            </article>
-            
-            <article class="headerTitulo">
-                <h1>CLUB SOCIAL Y DEPORTIVO ROCA</h1>
-            </article>
-
-            <nav class="navBar">
-                <ul> <!--       LISTA DE PAGINAS          -->
-                    <li><a href="../index.html" >Inicio</a></li>
-                    <li><a href="../pages/categorias.html">Categorias</a></li>
-                    <li><a href="../pages/arena.html">Arena</a></li>
-                    <li><a href="../pages/profesores.html">Profesores</a></li>
-                    <li><a href="../pages/sponsors.html">Sponsors</a></li>
-                    <li><a href="../pages/contacto.html">Contacto</a></li>
-                </ul>
+<!--  NAVBAR BOOTSTRAP(TITULO+COLOR+SOMBRA/LOGO) -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid hstack gap-1 ms-auto">
+<!--                NAVBAR BOOTSTRAP(TITULO)     -->
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="headerTitulo container-fluid">
+                            <span class="mb-0 h3" style="color:#011AFF; filter: drop-shadow(1px 1px 1px black)">CLUB SOCIAL Y DEPORTIVO ROCA</span>
+                        </div>
+                    </nav>
+<!--                NAVBAR BOOTSTRAP(LOGO)      -->
+                    <a class="navbar-brand" href="../index.html"><img src="../images/Deproca_logo.png" alt="Banner Logo" width="60" height="70"></a>
+<!--                NAVBAR BOOTSTRAP(BOTON-MENU) -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #e96529;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+<!--                NAVBAR BOOTSTRAP(NAVBAR)     -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/categorias.html">Categorias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/arena.html">Arena</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/profesores.html">Profesores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/sponsors.html">Sponsors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
 
             <article class="headerBanner">
-                <img src="../images/cancha-exterior.jpeg" alt="Banner Cancha"/>
+                <img src="../images/cancha-exterior.jpeg" class="img-fluid w-100 mh-auto position-relative" style="height: 148px;" alt="Banner Cancha"/>
             </article>
-        </header>
-        <!--            CUERPO DEL SITIO                 -->
+            </header>
+
+<!--            CUERPO DEL SITIO                 -->
         <main id="main">
             <h2>PAGE SPONSORS</h2>
         </main>
-        <!--            FOOTER DEL SITIO                 -->
+<!--            FOOTER DEL SITIO                 -->
         <footer id="footer">
             <article class="footerRedes"><!--   ICONOS DE REDES         -->
                 <ul class="listRedes">
@@ -71,29 +96,33 @@
                     </li>
                 </ul>
             </article>
-            
-            <article class="footerLogo">
-                <img src="../images/Logo - Naranja.png" alt="Footer Logo" object-fit="fill" width="137px" >
+<!--        LOGO CENTRADO + LINK HEADER          -->
+            <article class="footerLogo img-fluid">
+                <a href="#"><img src="../images/Logo - Naranja.png" alt="Footer Logo" object-fit="fill" width="137px" ></a>
             </article>
+<!--            DATOS DE CONTACTO                -->
             <article id="contListFooter">
-                <ul class="listFooterContacto">
+                <ul class="listFooterContacto container-fluid fs-6">
                     <li>
                         <p><strong>Contacto:</strong></p>
                     </li>
                     <li>
-                        <img src="../icons/icon-home.png" width="24px" ><p><strong>- Gdor. Castello 120, Gral. Roca, Río Negro</strong></p>
+                        <img src="../icons/icon-home.png" height="18px" ><p>Gdor. Castello 120, Gral. Roca, Río Negro</p>
                     </li>
                     <li>
-                        <img src="../icons/icon-email.png" width="24px" ><p><strong>- contacto@deportivoroca.com.ar</strong></p>
+                        <img src="../icons/icon-email.png" height="18px" ><p>contacto@deportivoroca.com.ar</p>
                     </li>
                     <li>
-                        <img src="../icons/icon-tel.png" width="24px" ><p><strong>- 0298-4604443</strong></p>
+                        <img src="../icons/icon-tel.png" height="18px" ><p>0298-4604443</p>
                     </li>
                 </ul>
             </article>
-            <article class="footerText">
-                <h5>© Copyright Deportivo General Roca</h5>
+
+            <article class="footerText fs-6 fw-light">
+                <p>© Copyright Deportivo General Roca</p>
             </article>
         </footer>
+<!--    SCRIPT DE BOOSTRAP / FUNCIONES AL FINAL DEL BODY   -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>
