@@ -1,0 +1,121 @@
+/*========================================*/
+/*//////      DISEÑO RESPONSIVE     //////*/
+/*========================================*/
+
+/*   Small Mobil Vertical (hasta 320px)   */
+@media (max-width: 320px) { 
+/*    RESPONSIVE / GRID - CATEGORIAS      */
+    .slider .slide img {
+        height: 40px;
+        object-fit: contain;
+    }
+/*    RESPONSIVE / ICONOS REDES           */
+    .listRedes li a {
+        width: 30px;
+        height: 30px;
+        line-height: 27px;
+        font-size: 14px;
+        margin: 0 10px;
+        border: 1px solid #e96529;
+    }
+/*    RESPONSIVE / LOGO FOOTER            */
+    .footerLogo a img{
+        width: 50px;
+    }
+/*    RESPONSIVE / DATOS DE CONTACTO      */
+#contListFooter .listFooterContacto li{
+    width: 190px;
+    font-size: 10px;
+    }
+    #contListFooter .listFooterContacto li img{
+        width: 10px;
+        object-fit: contain;
+    }
+}
+
+/*  Small Mobil Horizontal(de 320px hasta 480px)  */
+@media (min-width: 320px) and (max-width: 480px) { 
+/*    RESPONSIVE / GRID - CATEGORIAS      */
+    .slider .slide img {
+        height: 50px;
+        object-fit: contain;
+    }
+/*    RESPONSIVE / ICONOS REDES           */
+    .listFooterContacto li{
+        width: 280px;
+        height: 16px;
+        font-size: 14px;
+    }
+/*    RESPONSIVE / LOGO FOOTER            */
+    .footerLogo a img{
+        width: 90px;
+    }
+/*    RESPONSIVE / DATOS DE CONTACTO      */
+    #contListFooter .listFooterContacto li{
+        width: 200px;
+        font-size: 10px;
+    }
+    #contListFooter .listFooterContacto li img{
+        width: 10px;
+        object-fit: contain;
+    }
+}
+
+/*   - Personalizado (menos de 438px) -    */
+@media (max-width: 438px) { 
+/*      RESPONSIVE / BANNER HEADER         */
+    .headerBanner img{
+        height: 70px;
+    }
+}
+
+/* - Personalizado (menos de 593px) -      */
+@media (min-width: 438px) and (max-width: 593px) { 
+/*     RESPONSIVE / BANNER HEADER          */
+    .headerBanner img{
+        height: 100px;
+    }
+}
+
+/*  Medium Devices/Tablets(de 480px hasta 600px)  */
+@media (min-width: 480px) and (max-width: 600px) { 
+/*    RESPONSIVE / GRID - CATEGORIAS       */
+    #responsiveGrid .contentGrid {
+        height: 420px;
+    }
+    #responsiveGrid .bigImage {
+        height: 420px;
+    }
+    #responsiveGrid .smallImage {
+        height: 420px;
+    }
+/*    RESPONSIVE / GRID - CATEGORIAS       */
+    .slider .slide img {
+        width: 60%;
+        height: 60%;
+    }
+/*      RESPONSIVE / LOGO FOOTER           */
+    .footerLogo a img{
+        width: 120px;
+    }
+}
+
+/*  Medium Devices/IPAD(de 600px hasta 768px)    */
+@media (max-width: 600px) and (min-width: 768px) { 
+    #responsiveGrid .contentGrid {
+        height: 480px;
+    }
+    #responsiveGrid .bigImage {
+        height: 480px;
+    }
+    #responsiveGrid .smallImage {
+        height: 480px;
+    }
+/*      RESPONSIVE / GRID - CATEGORIAS    */
+    .slider .slide img {
+        height: 90px;
+    }
+}
+
+/* X-Large devices (large desktops,mayor a 1200px) */
+@media (min-width: 1200px) {  }

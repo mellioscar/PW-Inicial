@@ -1,0 +1,102 @@
+
+/*========================================*/
+/*////// DISEÑO FOOTER              //////*/
+/*========================================*/
+
+.footer {
+    background-color: white;
+    font-family: 'Carme';
+    text-decoration: none;
+}
+
+#footer .footerLogo img {
+    position: relative;
+    transform: translate(45vw,6px); /*POSICIONA EL LOGO EN EL CENTRO*/
+}
+
+#contListFooter .listFooterContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;           /*POSICIONA LOS DATOS DE CONTACTO A LA DERECHA*/
+}
+
+/*       LOGOS REDES + EFECTOS           */
+#footer .listRedes {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    display:inline-flex;
+}
+
+.listRedes li {
+    list-style: none;
+}
+
+.listRedes li a {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 42px;
+    font-size: 23px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #e96529;
+    z-index: 1;
+}
+
+.listRedes li a .icon {
+    position: relative;
+    color: #e96529;
+    transition: .5s;
+    z-index: 3;
+}
+
+.listRedes li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+.listRedes li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+
+.listRedes li a:hover:before {
+    top: 0;
+}
+/*CAMBIO COLOR LOGO RED FACEBOOK  */
+.listRedes li:nth-child(1) a:before{
+    background: #3b5999;
+}
+/*CAMBIO COLOR LOGO RED YOUTUBE   */
+.listRedes li:nth-child(2) a:before{
+    background: #e62e2d;
+}
+/*CAMBIO COLOR LOGO RED INSTAGRAM */
+.listRedes li:nth-child(3) a:before{
+    background: #e62e6d;
+}
+/*CAMBIO COLOR LOGO RED TWITTER   */
+.listRedes li:nth-child(4) a:before{
+    background: #376ebe;
+}
+
+/*         CONTACTO FOOTER                */
+
+.listFooterContacto li{
+    width: 350px;
+    height: 20px;
+    display: flex;
+    color: black;
+}

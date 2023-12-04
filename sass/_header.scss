@@ -1,0 +1,17 @@
+/*========================================*/
+/*////// DISEÑO HEADER              //////*/
+/*========================================*/
+
+header {
+    height: 245px;
+    font-family: 'Carter One';
+}
+
+/*      PROPIEDADES DEL BANNER           */
+.headerBanner img{
+    height: 148px;
+}
+
+.headerBanner img:hover{
+    filter: drop-shadow(-5px 5px 10px black);
+}

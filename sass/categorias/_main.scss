@@ -1,0 +1,46 @@
+/*========================================*/
+/*////// CONTENIDO MAIN-CATEGORIAS  //////*/
+/*========================================*/
+
+/*           CONTENIDO CATEGORIAS         */
+
+/*            RESPONSIVE GRID             */
+.textCat {
+    color: #011AFF;
+    font-family: 'Carme';
+}
+
+#responsiveGrid .contentGrid {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+#responsiveGrid .image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+}
+#responsiveGrid .bigImage {
+    height: 360px;
+}
+
+#responsiveGrid .smallImage {
+    height: 380px;
+}
+
+#responsiveGrid #imageOne {
+    background-image: url("../images/categorias/cancha-entrenando2.jpeg");
+}
+
+#responsiveGrid #imageTwo {
+    background-image: url("../images/categorias/ninos-pelota.jpg");
+}
+
+#responsiveGrid #imageThree {
+    background-image: url("../images/categorias/profesora-alumnos.jpg");
+}
+
+#responsiveGrid #imageFour {
+    background-image: url("../images/categorias/cancha-entrenando.jpg");
+}
