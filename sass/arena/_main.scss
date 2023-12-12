@@ -1,0 +1,83 @@
+//DISEÑO MAIN PAGE ARENA
+
+// Variables
+$image-size: 400px;
+$gap-size: 0.5rem;
+
+.grid-gallery{
+    display: grid;
+    padding: 3px;
+    grid-auto-rows: $image-size;
+    gap: $gap-size;
+    grid-auto-flow: row dense;
+    $num-columns: 5;
+    grid-template-columns: repeat($num-columns, 1fr);
+    &__image {
+        &:nth-child(1) {
+            grid-column: span 2; 
+            grid-row: span 1;
+        }
+        &:nth-child(2) {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        &:nth-child(3) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        &:nth-child(4) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        &:nth-child(5) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        &:nth-child(6) {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        &:nth-child(7) {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        &:nth-child(8) {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        &:nth-child(9) {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+        &:nth-child(10) {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+        &:nth-child(11) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        &:nth-child(12) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        &:nth-child(13) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        &:nth-child(14) {
+            grid-column: span 4;
+            grid-row: span 1;
+        }
+        &:nth-child(6) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+}

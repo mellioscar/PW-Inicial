@@ -1,0 +1,86 @@
+//DISEÑO MAIN PAGE CONTACTO
+
+.textContact {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #011AFF;
+    font-family: 'Carme';
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-wrapper {
+    color: #011AFF;
+    font-family: 'Carme';
+    filter: drop-shadow(0 0 6px black);
+    box-shadow: 0 0 5px 5px rgba(10, 42, 248, 0.3);
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    label {
+        display: block;
+    }
+    p {
+        margin: 0;
+        padding: 1em;
+    }
+    .block {
+        grid-column: 1 / 3;
+    }
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.content-maps {
+    width: 100vw;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}

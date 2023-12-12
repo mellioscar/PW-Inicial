@@ -8,6 +8,7 @@
 .textCat {
     color: #011AFF;
     font-family: 'Carme';
+    filter: drop-shadow(0 0 6px black);
 }
 
 #responsiveGrid .contentGrid {
@@ -22,11 +23,11 @@
     background-position: 50% 0%;
 }
 #responsiveGrid .bigImage {
-    height: 360px;
+    height: 390px;
 }
 
 #responsiveGrid .smallImage {
-    height: 380px;
+    height: 480px;
 }
 
 #responsiveGrid #imageOne {

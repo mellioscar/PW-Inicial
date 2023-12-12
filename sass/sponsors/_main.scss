@@ -1,0 +1,32 @@
+//DISEÑO MAIN PAGE SPONSORS
+
+#main{
+    padding-top: 30px;
+    font-family: 'Carme';
+    color: #011AFF;
+    text-align: center;
+    .filaSponsor{
+        padding-bottom: 40px;
+    }
+    .columSponsor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        perspective: 600px;
+        border: none;
+        .logo3d{
+            width: 350px;
+            animation: rotar 7s linear infinite;
+        }
+    }
+}
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}

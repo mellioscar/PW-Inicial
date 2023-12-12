@@ -1,8 +1,11 @@
-@import "footer"; 
-@import "header";
-@import "resetCSS";
+@import "footer";           //PAGE DEL FOOTER
+@import "header";           //PAGE DEL HEADER
+@import "resetCSS";         //RESET
+@import "responsive";       //DISEÑO RESPONSIVE
 
-@import "inicio/main";
-@import "categorias/main";
-
-
+@import "inicio/main";      //PAGE MAIN-INICIO
+@import "categorias/main";  //PAGE MAIN-CATEGORIAS
+@import "arena/main";       //PAGE MAIN-ARENA
+@import "contacto/main";    //PAGE MAIN-CONTACTO
+@import "profesores/main";  //PAGE MAIN-PROFESORES
+@import "sponsors/main";    //PAGE MAIN-SPONSORS

@@ -23,18 +23,27 @@
         width: 50px;
     }
 /*    RESPONSIVE / DATOS DE CONTACTO      */
-#contListFooter .listFooterContacto li{
-    width: 190px;
-    font-size: 10px;
+    #contListFooter .listFooterContacto li{
+        width: 190px;
+        font-size: 10px;
     }
     #contListFooter .listFooterContacto li img{
         width: 10px;
         object-fit: contain;
     }
+/*     RESPONSIVE / PAGE ARNEA            */
+    #grid-gallery .grid-gallery__image { 
+        grid-auto-rows: 50px;
+        grid-template-columns: 1;
+    }
+/*      RESPONSIVE / TITULO HEADER         */
+    .headerTitulo {
+        font-size: 14px;
+    }
 }
 
-/*  Small Mobil Horizontal(de 320px hasta 480px)  */
-@media (min-width: 320px) and (max-width: 480px) { 
+/*  Small Mobil Horizontal(menos de 480px)  */
+@media (max-width: 480px) { 
 /*    RESPONSIVE / GRID - CATEGORIAS      */
     .slider .slide img {
         height: 50px;
@@ -59,22 +68,23 @@
         width: 10px;
         object-fit: contain;
     }
-}
-
-/*   - Personalizado (menos de 438px) -    */
-@media (max-width: 438px) { 
-/*      RESPONSIVE / BANNER HEADER         */
-    .headerBanner img{
-        height: 70px;
+/*     RESPONSIVE / PAGE ARNEA             */
+    #grid-gallery .grid-gallery__image { 
+        grid-auto-rows: 50px;
+        grid-template-columns: 1;
+    }
+/*      RESPONSIVE / TITULO HEADER         */
+    .headerTitulo {
+        font-size: 15px;
     }
 }
 
-/* - Personalizado (menos de 593px) -      */
+/* - Personalizado (de 438px a 593px) -    */
 @media (min-width: 438px) and (max-width: 593px) { 
-/*     RESPONSIVE / BANNER HEADER          */
-    .headerBanner img{
-        height: 100px;
-    }
+/*      RESPONSIVE / TITULO HEADER         */
+.headerTitulo {
+    font-size: 16px;
+}
 }
 
 /*  Medium Devices/Tablets(de 480px hasta 600px)  */
@@ -98,10 +108,14 @@
     .footerLogo a img{
         width: 120px;
     }
+/*      RESPONSIVE / TITULO HEADER         */
+    .headerTitulo {
+        font-size: 19px;
+    }
 }
 
 /*  Medium Devices/IPAD(de 600px hasta 768px)    */
-@media (max-width: 600px) and (min-width: 768px) { 
+@media (min-width: 600px) and (max-width: 768px) { 
     #responsiveGrid .contentGrid {
         height: 480px;
     }
@@ -115,7 +129,23 @@
     .slider .slide img {
         height: 90px;
     }
+/*        RESPONSIVE / TITULO HEADER      */
+    .headerTitulo {
+        font-size: 24px;
+    }
+}
+
+/* - Personalizado (de 438px a 593px) -    */
+@media (max-width: 1024px) { 
+/*        RESPONSIVE / TEXTO PROFESORES    */
+    .textProf {
+        font-size: 14px;
+    }
 }
 
 /* X-Large devices (large desktops,mayor a 1200px) */
-@media (min-width: 1200px) {  }
+@media (min-width: 768px) and (max-width: 1200px) { 
+    .headerTitulo {
+        font-size: 26px;
+    }
+}

@@ -11,7 +11,7 @@ li {
 }
 
 /*========================================*/
-/*///// DISEÑO BODY STANDAR PARA PAGE ////*/
+/*/////    DISEÑO BODY/MAIN PAGE'S    ////*/
 /*========================================*/
 
 body {
@@ -20,8 +20,17 @@ body {
 }
 
 main {
-    font-family: 'Carme';
-    padding-top: 20px;
-    min-height: 100vh;  /*100% DE VISTA DE PANTALLA DEL MAIN */
-    background: linear-gradient(to right, dodgerblue, white);
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10px;
+    background: linear-gradient(45deg,dodgerblue,white,#f76827);
+    background-size: 160% 160%;
+    position: relative;
+    animation: movimiento 10s ease infinite;
+}
+
+@keyframes movimiento {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
 }
