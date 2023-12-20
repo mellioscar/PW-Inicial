@@ -1,6 +1,5 @@
-
 /*========================================*/
-/*////// DISEÑO FOOTER              //////*/
+/*//////        DISEÑO FOOTER       //////*/
 /*========================================*/
 
 .footer {
@@ -9,30 +8,42 @@
     text-decoration: none;
 }
 
-#footer .footerLogo img {
-    position: relative;
-    transform: translate(45vw,6px); /*POSICIONA EL LOGO EN EL CENTRO*/
+#footer {
+    .footerLogo img {
+        position: relative;
+        transform: translate(45vw,5px); /*POSICIONA EL LOGO EN EL CENTRO*/
+    }
+    .listRedes {
+        position: relative;
+        top: 10px;
+        left: 5px;
+        display:inline-flex;
+    }
 }
 
-#contListFooter .listFooterContacto {
+#contListFooter {
+    padding-top: 15px;
+    .listFooterContacto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;     /*POSICIONA LOS DATOS DE CONTACTO A LA DERECHA*/
+    }
+}
+
+/*         CONTACTO FOOTER                */
+
+.listFooterContacto li{
+    width: 350px;
+    height: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;           /*POSICIONA LOS DATOS DE CONTACTO A LA DERECHA*/
+    align-items: center;
+    color: black;
 }
 
 /*       LOGOS REDES + EFECTOS           */
-#footer .listRedes {
-    position: relative;
-    top: 10px;
-    left: 5px;
-    display:inline-flex;
-}
-
-.listRedes li {
-    list-style: none;
-}
 
 .listRedes li a {
+    list-style: none;
     width: 50px;
     height: 50px;
     background-color: #fff;
@@ -90,13 +101,4 @@
 /*CAMBIO COLOR LOGO RED TWITTER   */
 .listRedes li:nth-child(4) a:before{
     background: #376ebe;
-}
-
-/*         CONTACTO FOOTER                */
-
-.listFooterContacto li{
-    width: 350px;
-    height: 20px;
-    display: flex;
-    color: black;
 }

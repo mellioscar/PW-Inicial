@@ -31,11 +31,6 @@
         width: 10px;
         object-fit: contain;
     }
-/*     RESPONSIVE / PAGE ARNEA            */
-    #grid-gallery .grid-gallery__image { 
-        grid-auto-rows: 50px;
-        grid-template-columns: 1;
-    }
 /*      RESPONSIVE / TITULO HEADER         */
     .headerTitulo {
         font-size: 14px;
@@ -43,18 +38,21 @@
 }
 
 /*  Small Mobil Horizontal(menos de 480px)  */
-@media (max-width: 480px) { 
+@media (min-width: 320px) and (max-width: 480px) { 
 /*    RESPONSIVE / GRID - CATEGORIAS      */
     .slider .slide img {
         height: 50px;
         object-fit: contain;
     }
 /*    RESPONSIVE / ICONOS REDES           */
-    .listFooterContacto li{
-        width: 280px;
-        height: 16px;
-        font-size: 14px;
-    }
+.listRedes li a {
+    width: 40px;
+    height: 40px;
+    line-height: 33px;
+    font-size: 20px;
+    margin: 0 10px;
+    border: 2px solid #e96529;
+}
 /*    RESPONSIVE / LOGO FOOTER            */
     .footerLogo a img{
         width: 90px;
@@ -67,11 +65,6 @@
     #contListFooter .listFooterContacto li img{
         width: 10px;
         object-fit: contain;
-    }
-/*     RESPONSIVE / PAGE ARNEA             */
-    #grid-gallery .grid-gallery__image { 
-        grid-auto-rows: 50px;
-        grid-template-columns: 1;
     }
 /*      RESPONSIVE / TITULO HEADER         */
     .headerTitulo {
@@ -135,7 +128,7 @@
     }
 }
 
-/* - Personalizado (de 438px a 593px) -    */
+/* - Personalizado (hasta 1024px) -    */
 @media (max-width: 1024px) { 
 /*        RESPONSIVE / TEXTO PROFESORES    */
     .textProf {

@@ -67,7 +67,6 @@
                     </div>
                 </div>
             </nav>
-
             <article class="headerBanner">
                 <img src="./images/banner-header.jpg" class="img-fluid" alt="Banner"/>
             </article>
@@ -81,8 +80,8 @@
             <div class="container">
                     <div class="row">
                         <div class="col-md-6"> 
-                            <img src="./images/profesores/4-profesora.jpg" class="img-fluid rounded mx-auto d-block mb-2" alt="Profesora">
-                            <img src="./images/profesores/tecnico-profesor-2.jpg" class="img-fluid rounded mx-auto d-block mb-2" alt="Profesor">
+                            <a href="./pages/categorias.html"><img src="./images/profesores/4-profesora.jpg" class="img-fluid rounded mx-auto m-5" alt="Profesora"></a>
+                            <a href="./pages/profesores.html"><img src="./images/profesores/tecnico-profesor-2.jpg" class="img-fluid rounded mx-auto m-5" alt="Profesor"></a>
                         </div>
                         <div class="col-md-6">
                             <article class="textInicio">
@@ -102,11 +101,17 @@
                                     El Depo es un club muy popular en la ciudad de General Roca. El equipo cuenta con una gran masa de hinchas que lo siguen en cada partido. El Depo es un orgullo para la ciudad y para la región.
                                 </p>
                             </article>
-                            <img src="./images/arena/9-arena-exterior-2.jpg" class="img-fluid rounded mx-auto d-block mb-2" alt="Arena LLeno">
+                            <a href="./pages/arena.html"><img src="./images/arena/14-Estadio-Lateral-lleno.jpg" class="img-fluid rounded mx-auto" alt="Arena LLeno"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="contenedor" id="contenedor">
+                            <div class="imagen-3d" id="imagen">
+                                <img src="./images/Arena-exterior.jpg" class="img-fluid rounded" alt="Arena">
+                            </div>
                         </div>
                     </div>
             </div>
-
 <!--               SLIDE DE SPONSORS              -->
             <center id="textSponsor">
                 <p>NUESTROS SPONSORS:</p> 
@@ -136,7 +141,7 @@
                         <div class="slide">
                             <img src="./images/sponsors/logo-under armor.png" class="img-fluid" alt="UnderArmor" object-fit="scale-down">
                         </div>
-
+<!--                    COPIA OTRA LINEA DE LOGOS DE SPONSORS              -->
                         <div class="slide">
                             <img src="./images/sponsors/logo-adidas.png" alt="Adidas" class="img-fluid"object-fit="scale-down">
                         </div>
@@ -187,18 +192,10 @@
 <!--            DATOS DE CONTACTO                -->
             <article id="contListFooter">
                 <ul class="listFooterContacto container-fluid">
-                    <li>
-                        <p><strong>Contacto:</strong></p>
-                    </li>
-                    <li>
-                        <img src="./icons/icon-home.png"><p>Gdor. Castello 120, Gral. Roca, Río Negro</p>
-                    </li>
-                    <li>
-                        <img src="./icons/icon-email.png"><p>contacto@deportivoroca.com.ar</p>
-                    </li>
-                    <li>
-                        <img src="./icons/icon-tel.png"><p>0298-4604443</p>
-                    </li>
+                    <li><p><strong>Contacto:</strong></p></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Gdor. Castello 120, Gral. Roca, Río Negro</li>
+                    <li><i class="fas fa-phone"></i> (0298) - 4604443</li>
+                    <li><i class="fas fa-envelope-open-text"></i> contacto@deportivoroca.com.ar</li>
                 </ul>
             </article>
 
@@ -206,6 +203,26 @@
                 <p>© Copyright Deportivo General Roca</p>
             </article>
         </footer>
+        
+        <script>//EFCECTO 3D SOBRE IMAGEN ESTADIO EXTERIOR //
+            const contenedor = document.getElementById('contenedor');
+            const imagen = document.getElementById('imagen');
+        
+            contenedor.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const { offsetWidth, offsetHeight } = contenedor;
+        
+                const x = (clientX / offsetWidth - 0.5) * 20; // Ajusta la sensibilidad en el eje X
+                const y = -(clientY / offsetHeight - 0.5) * 60; // Ajusta la sensibilidad en el eje Y
+        
+                imagen.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+            });
+        
+            contenedor.addEventListener('mouseout', () => {
+                imagen.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+        </script>
+
 <!--    SCRIPT DE BOOSTRAP / FUNCIONES AL FINAL DEL BODY   -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>

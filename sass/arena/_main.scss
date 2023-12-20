@@ -1,79 +1,29 @@
-//DISEÑO MAIN PAGE ARENA
+/*========================================*/
+/*//////   CONTENIDO MAIN-ARENA     //////*/
+/*========================================*/
 
-// Variables
-$image-size: 400px;
-$gap-size: 0.5rem;
+.tituloPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    .textTitulo{
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); /* Añade una sombra para simular profundidad */
+        border-radius: 5px;
+    }
+}
+
+.containerArena{
+    margin: 0 10vw;
+}
 
 .grid-gallery{
     display: grid;
     padding: 3px;
-    grid-auto-rows: $image-size;
-    gap: $gap-size;
+    gap: 0.5rem;
+    grid-auto-rows: 300px;
     grid-auto-flow: row dense;
-    $num-columns: 5;
-    grid-template-columns: repeat($num-columns, 1fr);
-    &__image {
-        &:nth-child(1) {
-            grid-column: span 2; 
-            grid-row: span 1;
-        }
-        &:nth-child(2) {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-        &:nth-child(3) {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-        &:nth-child(4) {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-        &:nth-child(5) {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-        &:nth-child(6) {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-        &:nth-child(7) {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-        &:nth-child(8) {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-        &:nth-child(9) {
-            grid-column: span 3;
-            grid-row: span 2;
-        }
-        &:nth-child(10) {
-            grid-column: span 1;
-            grid-row: span 2;
-        }
-        &:nth-child(11) {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-        &:nth-child(12) {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-        &:nth-child(13) {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-        &:nth-child(14) {
-            grid-column: span 4;
-            grid-row: span 1;
-        }
-        &:nth-child(6) {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-    }
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     &__image {
         width: 100%;
         height: 100%;
